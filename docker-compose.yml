@@ -1,5 +1,5 @@
 services:
-  # Сервіс бази даних
+  # Database service
   db:
     image: postgres:15-alpine
     volumes:
@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
 
-  # Сервіс нашого сайту
+  # Web Service
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
